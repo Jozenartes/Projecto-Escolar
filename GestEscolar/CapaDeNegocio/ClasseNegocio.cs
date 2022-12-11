@@ -20,10 +20,5 @@ namespace CapaDeNegocio
         {
             return clsDados.DLogin(obje);
         }
-
-        public DataTable N_Login(global::CapaDeNegocio.ClasseNegocio clsUser)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
