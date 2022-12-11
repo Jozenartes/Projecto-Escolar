@@ -7,7 +7,5 @@ namespace CapaDeEntidade
     {
         public string usuario { get; set; }
         public string senha { get; set; }
-
-        
     }
 }
