@@ -19,3 +19,7 @@ nome_tipo varchar(20)not null,
 )
 
 insert into Tipo values('T0001','Administrador') /*Tipo de usuario, Admin*/
+
+create proc sp_logar
+@usuario varchar(20),
+@senha varchar(10)
