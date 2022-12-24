@@ -22,3 +22,6 @@ insert into Tipo values('T0001','Administrador') /*T de tipo*/
 create proc sp_logar
 @usuario varchar(20),
 @senha varchar(10)
+as
+select nome_usuario,senha_usuario,id_tipo, id_usuario from usuario
+where nome_usuario=@usuario and senha_usuario=@senha
