@@ -12,9 +12,12 @@ namespace CapaDeNegocio
     public class ClasseNegocio
     {
         ClasseDados clsDados = new ClasseDados();
+
+        public string usuario { get; set; } //propriedade usuario criado para referenciar na ClasseEntidade
+
         public DataTable N_Login(ClasseEntidade obje)
         {
-            return clsdados.DLogin(obje);
+            return clsDados.DLogin(obje);
         }
     }
 }
