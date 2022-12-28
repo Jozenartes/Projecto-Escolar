@@ -19,5 +19,6 @@ namespace CapaDeNegocio
         {
             return clsDados.DLogin(obje);
         }
+        
     }
 }

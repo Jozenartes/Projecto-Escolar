@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 
 namespace CapaDeEntidade
 {
@@ -10,5 +7,12 @@ namespace CapaDeEntidade
     {
         public string usuario { get; set; }
         public string senha { get; set; }
+
+        public DataTable N_Login(global::CapaDeNegocio.ClasseNegocio clsUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        
     }
 }
