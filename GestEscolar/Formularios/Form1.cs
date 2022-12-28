@@ -25,14 +25,14 @@ namespace Formularios
         FrmPrincipal f = new FrmPrincipal();
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   //reconhecimento do usuario e a senha
             DataTable dt = new DataTable();
 
             clsUser.usuario = textBox1.Text;
             clsEnt.senha = textBox2.Text; //assigning the value the passes from senha to textbox2
 
             dt = clsUser.N_Login(clsUser);
-
+            //Condição de entrada
             if (dt.Rows.Count > 0)
             {
                 MessageBox.Show("Bem Vindo" + dt.Rows[0][0].ToString(), "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);

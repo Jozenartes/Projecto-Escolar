@@ -8,11 +8,6 @@ namespace CapaDeEntidade
         public string usuario { get; set; }
         public string senha { get; set; }
 
-        public DataTable N_Login(global::CapaDeNegocio.ClasseNegocio clsUser)
-        {
-            throw new NotImplementedException();
-        }
-
         
     }
 }
