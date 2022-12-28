@@ -31,7 +31,7 @@ namespace Formularios
             clsUser.usuario = textBox1.Text;
             clsEnt.senha = textBox2.Text; //assigning the value the passes from senha to textbox2
 
-            dt = clsEnt.N_Login(clsUser);
+            dt = clsUser.N_Login(clsUser);
 
             if (dt.Rows.Count > 0)
             {
