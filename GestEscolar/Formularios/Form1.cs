@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDeEntidade;
 using CapaDeNegocio;
+using System.Data.SqlClient;
 
 namespace Formularios
 {
     public partial class Form1 : Form
     {
-        ClasseNegocio clsUser = new ClasseNegocio();
-        ClasseEntidade clsEnt = new ClasseEntidade();
+        ClasseEntidade clsUser = new ClasseEntidade();
+        ClasseNegocio clsEnt = new ClasseNegocio();
 
         public static string usuario_nome, //nome do usuario
                              id_tipo, //tipo do usuario a logar
@@ -23,6 +24,16 @@ namespace Formularios
                              usuario_codigo;
 
         FrmPrincipal f = new FrmPrincipal();
+        
+        private void Limpar()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
+        public Form1()
+        {
+            InitializeComponent();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {   //reconhecimento do usuario e a senha
@@ -37,9 +48,9 @@ namespace Formularios
             {
                 MessageBox.Show("Bem Vindo" + dt.Rows[0][0].ToString(), "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 usuario_nome = dt.Rows[0][0].ToString();
-                id_tipo = dt.Rows[0][1].ToString();
-                usuario_geral = dt.Rows[0][2].ToString();
-                usuario_codigo = dt.Rows[0][3].ToString();
+                id_tipo = dt.Rows[0][3].ToString();
+                usuario_geral = dt.Rows[0][1].ToString();
+                usuario_codigo = dt.Rows[0][4].ToString();
                 this.Hide();
                 f.ShowDialog();
                 Limpar();
@@ -49,18 +60,6 @@ namespace Formularios
                 MessageBox.Show("Usuario ou Senha errada", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpar();
             }
-        }
-
-        
-
-        private void Limpar()
-        {
-            textBox1.Text = "";
-            textBox2.Text = "";
-        }
-        public Form1()
-        {
-            InitializeComponent();
         }
     } 
 }

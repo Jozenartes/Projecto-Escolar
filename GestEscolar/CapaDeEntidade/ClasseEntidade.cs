@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using CapaDeNegocios;
+
 namespace CapaDeEntidade
 {
     public class ClasseEntidade
@@ -8,7 +8,7 @@ namespace CapaDeEntidade
         public string usuario { get; set; }
         public string senha { get; set; }
 
-        public DataTable N_Login(global::CapaDeNegocios.ClasseNegocio clsUser)
+        public DataTable N_Login(ClasseEntidade clsUser)
         {
             throw new NotImplementedException();
         }
